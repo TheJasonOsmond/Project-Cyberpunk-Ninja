@@ -6384,7 +6384,7 @@ GameObject:
   - component: {fileID: 8081274505164087466}
   - component: {fileID: 8080766248922532048}
   m_Layer: 10
-  m_Name: GrasslandsHornsRed
+  m_Name: HornyRed
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
