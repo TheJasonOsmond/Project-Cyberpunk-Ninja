@@ -48,18 +48,5 @@ namespace MoreMountains.TopDownEngine
 
 			return true;
 		}
-
-		//Returns the character
-		public Character collidingCharacter
-        {
-            get
-            {
-				return _character;
-            }
-        }
-
-
-
-
 	}
 }

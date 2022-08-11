@@ -74,8 +74,6 @@ namespace MoreMountains.TopDownEngine
             //Enable Movement
             EnableCollider();
 
-            Debug.Log("Owner: " + _owner);
-
             if (_pickableItem)
             {
                 _pickableItem.isPickable = true;

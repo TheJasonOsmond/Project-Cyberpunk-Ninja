@@ -7057,12 +7057,12 @@ PrefabInstance:
     - target: {fileID: 114929749446924034, guid: 131cb63cb93061a4c84bec4ea80fe00c,
         type: 3}
       propertyPath: PoolSize
-      value: 5
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 114929749446924034, guid: 131cb63cb93061a4c84bec4ea80fe00c,
         type: 3}
       propertyPath: PoolCanExpand
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114929749446924034, guid: 131cb63cb93061a4c84bec4ea80fe00c,
         type: 3}
@@ -8965,6 +8965,41 @@ PrefabInstance:
       propertyPath: ButtonPromptText
       value: SPACE
       objectReference: {fileID: 0}
+    - target: {fileID: 114953816608987032, guid: bf1cd8e183b38934a8cc11c8d3f06fc8,
+        type: 3}
+      propertyPath: SwitchOn.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114953816608987032, guid: bf1cd8e183b38934a8cc11c8d3f06fc8,
+        type: 3}
+      propertyPath: SwitchOn.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2112584905}
+    - target: {fileID: 114953816608987032, guid: bf1cd8e183b38934a8cc11c8d3f06fc8,
+        type: 3}
+      propertyPath: SwitchOff.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2112584905}
+    - target: {fileID: 114953816608987032, guid: bf1cd8e183b38934a8cc11c8d3f06fc8,
+        type: 3}
+      propertyPath: SwitchOn.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TurnSpawnOn
+      objectReference: {fileID: 0}
+    - target: {fileID: 114953816608987032, guid: bf1cd8e183b38934a8cc11c8d3f06fc8,
+        type: 3}
+      propertyPath: SwitchOff.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TurnSpawnOff
+      objectReference: {fileID: 0}
+    - target: {fileID: 114953816608987032, guid: bf1cd8e183b38934a8cc11c8d3f06fc8,
+        type: 3}
+      propertyPath: SwitchOn.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MoreMountains.TopDownEngine.TimedSpawner, MoreMountains.TopDownEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114953816608987032, guid: bf1cd8e183b38934a8cc11c8d3f06fc8,
+        type: 3}
+      propertyPath: SwitchOff.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MoreMountains.TopDownEngine.TimedSpawner, MoreMountains.TopDownEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf1cd8e183b38934a8cc11c8d3f06fc8, type: 3}
 --- !u!4 &1382089723 stripped
@@ -9673,6 +9708,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1111563993490490590, guid: 006b6d17348e72c4ca0fe5dddc5400cf,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2201129828444408654, guid: 006b6d17348e72c4ca0fe5dddc5400cf,
         type: 3}
       propertyPath: m_RootOrder
@@ -9726,6 +9766,16 @@ PrefabInstance:
     - target: {fileID: 2201129828444408654, guid: 006b6d17348e72c4ca0fe5dddc5400cf,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3256482984437750274, guid: 006b6d17348e72c4ca0fe5dddc5400cf,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3256690698967926154, guid: 006b6d17348e72c4ca0fe5dddc5400cf,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5279826695300404299, guid: 006b6d17348e72c4ca0fe5dddc5400cf,
@@ -12683,6 +12733,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1435468832}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2112584905 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114225137306780956, guid: 131cb63cb93061a4c84bec4ea80fe00c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1205395538}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a281bd70fc9480448850980ffb0ef08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2118239597
 GameObject:
   m_ObjectHideFlags: 0
