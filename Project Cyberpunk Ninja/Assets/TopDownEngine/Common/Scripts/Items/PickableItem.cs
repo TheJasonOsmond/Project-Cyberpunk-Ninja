@@ -112,7 +112,7 @@ namespace MoreMountains.TopDownEngine
 		/// </summary>
 		public virtual void PickItem(GameObject picker)
 		{
-			if (CheckIfPickable ())
+			if (CheckIfPickable())
 			{
 				Effects ();
 				PickableItemEvent.Trigger(this, picker);
