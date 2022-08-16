@@ -5302,8 +5302,8 @@ MonoBehaviour:
   TargetTransform: {fileID: 0}
   TargetPosition: {x: 0, y: 0, z: 0}
   PositionOffset: {x: 0, y: 0, z: 0}
-  CreateObjectPool: 0
-  ObjectPoolSize: 5
+  CreateObjectPool: 1
+  ObjectPoolSize: 10
   MutualizePools: 0
 --- !u!114 &6208484172845819708
 MonoBehaviour:
@@ -5502,9 +5502,9 @@ GameObject:
   - component: {fileID: 4821737260569321886}
   - component: {fileID: 4135674151291664418}
   - component: {fileID: 6425861836044019766}
-  - component: {fileID: 6356398180522831385}
   - component: {fileID: 2548593447296973172}
   - component: {fileID: 6270050715036479761}
+  - component: {fileID: -6743945757985560389}
   m_Layer: 18
   m_Name: ProjectileOrb
   m_TagString: Untagged
@@ -5780,23 +5780,6 @@ MonoBehaviour:
   FollowAcceleration: 0.75
   UpdateMode: 0
   CopyState: {fileID: 0}
---- !u!114 &6356398180522831385
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4781971205581445142}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86fd837a0abc28d4d91c55590bd2c090, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Item: {fileID: 11400000, guid: 1592bd12b16c62a438df214272ff2b45, type: 2}
-  Quantity: 1
-  RemainingQuantity: 1
-  PickableIfInventoryIsFull: 0
-  DisableObjectWhenDepleted: 0
 --- !u!114 &2548593447296973172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5832,6 +5815,24 @@ MonoBehaviour:
   TargetObjectDisableDelay: 1
   Model: {fileID: 0}
   isPickable: 0
+--- !u!114 &-6743945757985560389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4781971205581445142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21f84d4272b1cef42821cc667f752217, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Item: {fileID: 11400000, guid: c69e23b541ef10d45abf72ab9b28f9e8, type: 2}
+  Quantity: 1
+  RemainingQuantity: 1
+  PickableIfInventoryIsFull: 0
+  DisableObjectWhenDepleted: 0
+  itemPickable: 0
 --- !u!1 &5393939310842682806
 GameObject:
   m_ObjectHideFlags: 0
