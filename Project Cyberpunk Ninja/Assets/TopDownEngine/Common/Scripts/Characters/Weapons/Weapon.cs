@@ -715,7 +715,9 @@ namespace MoreMountains.TopDownEngine
 		public virtual void WeaponUse()
 		{
 			// apply recoil
-			if ((RecoilForce > 0f) && (_controller != null))
+			/// EDIT: (RecoilForce > 0f) -> (RecoilForce != 0f)
+			/// Allows for negative recoil (move towards attack)
+			if ((RecoilForce != 0f) && (_controller != null))
 			{
 				if (Owner != null)
 				{

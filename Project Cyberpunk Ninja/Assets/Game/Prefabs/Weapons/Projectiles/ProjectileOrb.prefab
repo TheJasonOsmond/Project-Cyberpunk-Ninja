@@ -5815,6 +5815,7 @@ MonoBehaviour:
   TargetObjectDisableDelay: 1
   Model: {fileID: 0}
   isPickable: 0
+  orbWeapon: {fileID: 0}
 --- !u!114 &-6743945757985560389
 MonoBehaviour:
   m_ObjectHideFlags: 0

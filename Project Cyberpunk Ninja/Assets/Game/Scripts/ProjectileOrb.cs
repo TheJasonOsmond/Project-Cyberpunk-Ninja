@@ -17,7 +17,7 @@ public class ProjectileOrb : Projectile
     //Protected Fields
     protected Transform Target;
     protected MagnitizeToPlayer _magToOwner;
-    protected PickableItemConditional _pickableItem;
+    protected PickableItemConditionalOrb _pickableItem;
     protected ItemPickerConditional _itemPicker;
 
     protected WaitForSeconds _stopAfterDurationWFS;
@@ -28,7 +28,7 @@ public class ProjectileOrb : Projectile
     {
         base.Awake();
         _magToOwner = GetComponent<MagnitizeToPlayer>();
-        _pickableItem = GetComponent<PickableItemConditional>();
+        _pickableItem = GetComponent<PickableItemConditionalOrb>();
         _itemPicker = GetComponent<ItemPickerConditional>();
 
         _pickableItem.enabled = false;
@@ -49,6 +49,10 @@ public class ProjectileOrb : Projectile
         //Sets Item Picker Ammo to 1
         _itemPicker.ResetQuantity();
         _itemPicker.itemPickable = false;
+
+        if (_pickableItem.orbWeapon == null)
+            _pickableItem.orbWeapon = _owner.GetComponent<CharacterHandleSecondaryWeapon>().CurrentWeapon;
+
 
     }
     protected override void FixedUpdate()

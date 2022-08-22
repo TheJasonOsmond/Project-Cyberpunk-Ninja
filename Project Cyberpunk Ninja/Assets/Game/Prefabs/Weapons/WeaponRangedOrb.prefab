@@ -348,9 +348,9 @@ MonoBehaviour:
   BurstLength: 3
   BurstTimeBetweenShots: 0.1
   MagazineBased: 1
-  MagazineSize: 5
-  AutoReload: 0
-  NoInputReload: 0
+  MagazineSize: 8
+  AutoReload: 1
+  NoInputReload: 1
   ReloadTime: 0.001
   AmmoConsumedPerShot: 1
   AutoDestroyWhenEmpty: 0
@@ -451,7 +451,7 @@ MonoBehaviour:
   NestUnderThis: 0
   GameObjectToPool: {fileID: 4781971205581445142, guid: ba00eaa8709d0b943904a261ed094221,
     type: 3}
-  PoolSize: 20
+  PoolSize: 5
   PoolCanExpand: 1
 --- !u!114 &3598884406658907773
 MonoBehaviour:

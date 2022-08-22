@@ -10,13 +10,21 @@ namespace MoreMountains.TopDownEngine
     {
 		GameObject _owner;
 		ProjectileOrb _orbProjectile;
+		public Weapon orbWeapon;
 
-        protected override void Start()
+
+		protected override void Start()
         {
             base.Start();
 			_orbProjectile = GetComponent<ProjectileOrb>();
-			_owner = _orbProjectile.OrbOwner; 
-        }
+			_owner = _orbProjectile.OrbOwner;
+
+			//Get the weapon that shot the projectile
+			orbWeapon = _owner.GetComponent <CharacterHandleSecondaryWeapon>().CurrentWeapon;
+			if (orbWeapon != null)
+				Debug.Log("Non-Null Orb Weapon");
+
+		}
 
         protected override bool CheckIfPickable()
 		{
@@ -49,5 +57,18 @@ namespace MoreMountains.TopDownEngine
 
 			return true;
 		}
-	}
+
+        protected override void Pick(GameObject picker)
+        {
+            base.Pick(picker);
+
+			Debug.Log("Check if Orb Weapon");
+			if (orbWeapon.name.Equals("WeapongRangedOrb") == true)
+				Debug.Log("Orb Weapon");
+				orbWeapon.InitiateReloadWeapon();
+			//Reload Orb Weapon when picked
+
+		}
+
+    }
 }

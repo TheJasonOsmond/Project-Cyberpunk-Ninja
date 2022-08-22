@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fac9bd89dcafc049b19f543ccf8fd57, type: 3}
   m_Name: OrbAmmo
   m_EditorClassIdentifier: 
-  ItemID: PlayerOrbAmmo
+  ItemID: OrbAmmo
   TargetInventoryName: MainInventory
   ForceSlotIndex: 0
   TargetIndex: 0
@@ -21,7 +21,7 @@ MonoBehaviour:
   ConsumeQuantity: 1
   Equippable: 0
   MoveWhenEquipped: 1
-  Droppable: 1
+  Droppable: 0
   CanMoveObject: 1
   CanSwapObject: 1
   DisplayProperties:
