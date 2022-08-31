@@ -22,7 +22,7 @@ public class HealthModdable : Health
     //MaxHealth cannot be reduced below this amount
     private float _minMaxhealth = 1f;
 
-    public void UpdateMaxHealth(float percentModValue, float flatModValue)
+    public void UpdateMaxHealth(float flatModValue, float percentModValue)
     {
         maxHealthPercentMod += percentModValue;
         maxHealthFlatMod += flatModValue;

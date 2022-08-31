@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fac9bd89dcafc049b19f543ccf8fd57, type: 3}
+  m_Script: {fileID: 11500000, guid: 1010d867c6dc6a34b95d850eba2c4d5b, type: 3}
   m_Name: BoonHealthMod
   m_EditorClassIdentifier: 
   ItemID: BoonHealthMod
@@ -86,3 +86,6 @@ MonoBehaviour:
   MovedSound: {fileID: 0}
   DroppedSound: {fileID: 0}
   UseDefaultSoundsIfNull: 1
+  MaxHealthFlatBonus: 100
+  MaxHealthPercentBonus: 0
+  TargetInventoryName: BoonInventory

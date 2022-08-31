@@ -13,26 +13,32 @@ public class BoonMaxHealth : InventoryItem
     
     /// the amount of health to add to the player when the item is used
     [Tooltip("the amount of max health to add to the player when the item is picked")]
-    public float MaxHealthBonus;
+    public float MaxHealthFlatBonus;
+
+    public float MaxHealthPercentBonus;
+
+    public static new string TargetInventoryName =  "BoonInventory";
 
     public override bool Pick(string playerID)
-    {
-        base.Pick(playerID);
-
+    { 
         if (TargetInventory(playerID).Owner == null)
         {
+            Debug.Log("Max Health Boon Failed to Pick: 1");
+            Debug.Log("Target Inventory: " + TargetInventory(playerID));
             return false;
         }
 
-        Health characterHealth = TargetInventory(playerID).Owner.GetComponent<Health>();
+        HealthModdable characterHealth = TargetInventory(playerID).Owner.GetComponent<HealthModdable>();
 
         if (characterHealth != null)
         {
-            characterHealth.ReceiveHealth(MaxHealthBonus, TargetInventory(playerID).gameObject);
+            characterHealth.UpdateMaxHealth(MaxHealthFlatBonus, MaxHealthPercentBonus);
+            Debug.Log("Max Health Boon Picked");
             return true;
         }
         else
         {
+            Debug.Log("Max Health Boon Failed to Pick: 2");
             return false;
         }
     }
