@@ -27,6 +27,7 @@ public abstract class CharacterBoon : InventoryItem
             Debug.Log("Target Inventory: " + TargetInventory(playerID));
             return false;
         }
+        //_owner = TargetInventory(playerID).Owner;
 
         GetOwnerInfo(playerID);
         AddBoon();

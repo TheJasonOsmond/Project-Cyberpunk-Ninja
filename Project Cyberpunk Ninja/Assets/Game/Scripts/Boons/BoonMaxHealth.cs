@@ -17,10 +17,10 @@ public class BoonMaxHealth : CharacterBoon
 
     public float maxHealthPercentBonus;
 
-/*    protected override void GetOwnerInfo(string playerID)
+    protected override void GetOwnerInfo(string playerID)
     {
         _owner = TargetInventory(playerID).Owner;
-    }*/
+    }
 
     public override void AddBoon()
     {
