@@ -262,6 +262,8 @@ namespace MoreMountains.TopDownEngine
 		protected int _aliveAnimationParameter;
 		protected int _comboInProgressAnimationParameter;
 
+		//protected string _weaponType = "None";
+
 		/// <summary>
 		/// On start we initialize our weapon
 		/// </summary>
@@ -1110,5 +1112,11 @@ namespace MoreMountains.TopDownEngine
 				MMAnimatorExtensions.UpdateAnimatorBool(animator, _comboInProgressAnimationParameter, _comboWeapon.ComboInProgress, list, PerformAnimatorSanityChecks);
 			}
 		}
+	public string GetWeaponType()
+    {
+		return "None";
+    }
+
 	}
+
 }

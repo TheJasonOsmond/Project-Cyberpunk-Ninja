@@ -6,41 +6,36 @@ using MoreMountains.TopDownEngine;
 using UnityEngine;
 
 
-public class BoonMaxHealth : InventoryItem
+public class BoonMaxHealth : CharacterBoon
 {
     [Header("Health")]
     [MMInformation("Here you need specify the amount of health gained when picking this item.", MMInformationAttribute.InformationType.Info, false)]
     
     /// the amount of health to add to the player when the item is used
     [Tooltip("the amount of max health to add to the player when the item is picked")]
-    public float MaxHealthFlatBonus;
+    public float maxHealthFlatBonus;
 
-    public float MaxHealthPercentBonus;
+    public float maxHealthPercentBonus;
 
-    public static new string TargetInventoryName =  "BoonInventory";
+/*    protected override void GetOwnerInfo(string playerID)
+    {
+        _owner = TargetInventory(playerID).Owner;
+    }*/
 
-    public override bool Pick(string playerID)
-    { 
-        if (TargetInventory(playerID).Owner == null)
-        {
-            Debug.Log("Max Health Boon Failed to Pick: 1");
-            Debug.Log("Target Inventory: " + TargetInventory(playerID));
-            return false;
-        }
-
-        HealthModdable characterHealth = TargetInventory(playerID).Owner.GetComponent<HealthModdable>();
+    public override void AddBoon()
+    {
+        HealthModdable characterHealth = _owner.GetComponent<HealthModdable>();
 
         if (characterHealth != null)
         {
-            characterHealth.UpdateMaxHealth(MaxHealthFlatBonus, MaxHealthPercentBonus);
+            characterHealth.UpdateMaxHealth(maxHealthFlatBonus, maxHealthPercentBonus);
             Debug.Log("Max Health Boon Picked");
-            return true;
         }
-        else
-        {
-            Debug.Log("Max Health Boon Failed to Pick: 2");
-            return false;
-        }
+
     }
 
+    public override void RemoveBoon()
+    {
+        throw new System.NotImplementedException();
+    }
 }

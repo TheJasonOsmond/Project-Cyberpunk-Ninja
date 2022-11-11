@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4565189611861034}
   - component: {fileID: 114594623923584052}
+  - component: {fileID: 162599193882821007}
   m_Layer: 0
-  m_Name: KoalaNinjaSword
+  m_Name: WeaponNinjaSword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,9 +75,9 @@ MonoBehaviour:
   RightHandHandle: {fileID: 0}
   ModifyMovementWhileAttacking: 0
   MovementMultiplier: 0
-  PreventAllMovementWhileInUse: 1
+  PreventAllMovementWhileInUse: 0
   PreventAllAimWhileInUse: 0
-  RecoilForce: 0
+  RecoilForce: -100
   Animators:
   - {fileID: 4034132523856729426}
   PerformAnimatorSanityChecks: 0
@@ -113,13 +114,44 @@ MonoBehaviour:
   ActiveDuration: 0.2
   TargetLayerMask:
     serializedVersion: 2
-    m_Bits: 1280
+    m_Bits: 8448
   MinDamageCaused: 10
   MaxDamageCaused: 10
   Knockback: 1
   KnockbackForce: {x: 500, y: 500, z: 0}
   InvincibilityDuration: 0.5
   CanDamageOwner: 0
+--- !u!114 &162599193882821007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1831551693771866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba85f5b87cb8cf84f9e09dcca90cd372, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AimControl: 3
+  RotationMode: 0
+  WeaponRotationSpeed: 0
+  MinimumAngle: -180
+  MaximumAngle: 180
+  MinimumMagnitude: 0.2
+  ReticleType: 0
+  Reticle: {fileID: 1373789777524232, guid: f31b518c2b50cc2479370c46d4485485, type: 3}
+  ReticleDistance: 0
+  ReticleHeight: 0
+  ReticleAtMousePosition: 0
+  RotateReticle: 0
+  ReplaceMousePointer: 1
+  MouseDeadZoneRadius: 0.5
+  DisplayReticle: 1
+  MoveCameraTargetTowardsReticle: 0
+  CameraTargetOffset: 0.3
+  CameraTargetMaxDistance: 10
+  CameraTargetSpeed: 5
 --- !u!1 &2872835621535565298
 GameObject:
   m_ObjectHideFlags: 0

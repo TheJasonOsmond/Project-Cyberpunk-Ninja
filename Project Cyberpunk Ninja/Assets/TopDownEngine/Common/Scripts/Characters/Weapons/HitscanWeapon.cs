@@ -87,6 +87,8 @@ namespace MoreMountains.TopDownEngine
 		protected Health _health;
 		protected Vector3 _damageDirection;
 
+		//protected new string _weaponType = "HitscanWeapon";
+
 		[MMInspectorButton("TestShoot")]
 		/// a button to test the shoot method
 		public bool TestShootButton;

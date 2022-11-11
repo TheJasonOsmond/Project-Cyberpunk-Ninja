@@ -61,6 +61,8 @@ namespace MoreMountains.TopDownEngine
 		protected Transform _projectileSpawnTransform;
 		protected int _spawnArrayIndex = 0;
 
+		//protected new string _weaponType = "ProjectileWeapon";
+
 		[MMInspectorButton("TestShoot")]
 		/// a button to test the shoot method
 		public bool TestShootButton;

@@ -6,7 +6,7 @@ using MoreMountains.InventoryEngine;
 using MoreMountains.Tools;
 
 
-public abstract class CharacterBoon : MonoBehaviour
+public abstract class CharacterBoon : InventoryItem
 {
     protected GameObject _owner;
     protected Weapon _weaponPrimary;
@@ -14,23 +14,57 @@ public abstract class CharacterBoon : MonoBehaviour
     protected Inventory _boonInventory;
     protected Character _character;
 
-    private void Awake()
-    {
-        _owner = _boonInventory.Owner;
+    protected string _weaponPrimaryType;
+    protected string _weaponSecondaryType;
 
-        if (_owner != null)
+    public static new string TargetInventoryName = "BoonInventory";
+
+    public override bool Pick(string playerID)
+    {
+        if (TargetInventory(playerID).Owner == null)
         {
-            _weaponPrimary = _owner.gameObject.MMGetComponentNoAlloc<CharacterHandleWeapon>().CurrentWeapon;
-            _weaponSecondary = _owner.gameObject.MMGetComponentNoAlloc<CharacterHandleSecondaryWeapon>().CurrentWeapon;
-            _character = _owner.gameObject.MMGetComponentNoAlloc<Character>();
+            Debug.Log("Boon Failed to Pick");
+            Debug.Log("Target Inventory: " + TargetInventory(playerID));
+            return false;
         }
 
+        GetOwnerInfo(playerID);
+        AddBoon();
 
+        return true;
     }
+
+
 
     public abstract void AddBoon();
 
     public abstract void RemoveBoon();
+
+    protected virtual void GetOwnerInfo(string playerID)
+    {
+        _boonInventory = TargetInventory(playerID);
+        _owner = TargetInventory(playerID).Owner;
+        _character = _owner.GetComponent<Character>();
+
+        _weaponPrimary = _owner.GetComponent<CharacterHandleWeapon>().CurrentWeapon;
+        _weaponPrimaryType = getWeaponType(_weaponPrimary);
+        _weaponSecondary = _owner.GetComponent<CharacterHandleSecondaryWeapon>().CurrentWeapon;
+        _weaponSecondaryType = getWeaponType(_weaponSecondary);
+
+    }
+
+    protected string getWeaponType(Weapon weapon)
+    {
+        if (weapon is MeleeWeapon)
+            return "Melee";
+        else if (weapon is ProjectileWeapon)
+            return "Projectile";
+        else if (weapon is HitscanWeapon)
+            return "Hitscan";
+        
+        return null;
+    }
+
 
 
 }

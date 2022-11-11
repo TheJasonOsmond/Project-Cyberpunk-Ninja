@@ -93,6 +93,8 @@ namespace MoreMountains.TopDownEngine
 		protected DamageOnTouch _damageOnTouch;
 		protected GameObject _damageArea;
 
+		//protected new string _weaponType = "MeleeWeapon";
+
 		/// <summary>
 		/// Initialization
 		/// </summary>
