@@ -49,9 +49,9 @@ public class BoonWeaponPrimaryDamage : CharacterBoon
 
         Debug.Log(meleeWeapon.GetInstanceID());
         Debug.Log(_weaponPrimary.GetInstanceID());
-        meleeWeapon.MinDamageCaused = (int) ((meleeWeapon.MinDamageCaused * (1 + damagePercentBonus)) + damageFlatBonus);
-        meleeWeapon.MinDamageCaused = 100;
-        meleeWeapon.MaxDamageCaused = (int) ((meleeWeapon.MaxDamageCaused * (1 + damagePercentBonus)) + damageFlatBonus);
+
+        meleeWeapon.updateDamage((int)((meleeWeapon.MinDamageCaused * (1 + damagePercentBonus)) + damageFlatBonus),
+            (int)((meleeWeapon.MaxDamageCaused * (1 + damagePercentBonus)) + damageFlatBonus));
 
     }
 }

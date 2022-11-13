@@ -302,5 +302,18 @@ namespace MoreMountains.TopDownEngine
 		{
 			_attackInProgress = false;
 		}
+
+
+		/// <summary>
+		/// Updates the damage of the damaging area
+		/// Author: Jason O
+		/// </summary>
+		/// <param name="minDamage"></param> Min Damage done in a melee attack
+		/// <param name="maxDamage"></param> Max Damage done in a melee attack
+		public void updateDamage(float minDamage, float maxDamage)
+        {
+			_damageOnTouch.MinDamageCaused = minDamage;
+			_damageOnTouch.MaxDamageCaused = maxDamage;
+		}
 	}
 }
